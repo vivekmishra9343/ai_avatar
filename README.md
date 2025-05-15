@@ -33,20 +33,20 @@ npm run dev
 
 If this was a real SaaS tool, I would prioritize these two features:
 
-1. **Avatar Customization Suite**: Implement a comprehensive set of tools allowing users to modify avatar attributes like hairstyle, clothing, and accessories using AI. This would add significant value by enabling personalization and making the platform more engaging. Users could create unique avatars that better represent their identity or brand.
+1. **AI-Powered Avatar Creation from a Photo**: With this feature, users could upload a photo of themselves and have a customized 3D avatar created for them automatically. It streamlines, engages, and personalizes the experience while eliminating the hassle of manual customization. A wide range of people would find this type of automation appealing, particularly those seeking fast and precise virtual representations of themselves or their brand.
 
-2. **Export & Integration System**: Develop functionality to export avatars in various formats (PNG, SVG, 3D models) and integrate with popular platforms like Discord, Slack, or social media. This would increase the tool's utility by making it practical for real-world use and expanding its reach across different platforms.
+2. **Export Avatars as GIFs or Videos**: While exporting avatars as static images or 3D models is useful, enabling users to export animated versions adds a dynamic element that greatly increases the utility and shareability of avatars. This would make the tool especially valuable for creators, streamers, marketers, and everyday users who want to showcase their avatars across platforms like Instagram, TikTok, or messaging apps. Together, these two features would significantly boost the platform’s appeal and real-world usability.
 
 ## Part 3: Challenge Faced
 
-The main challenge I faced was implementing the avatar upload and preview functionality while maintaining a clean user experience. I solved this by:
+Implementing the avatar upload and preview features while preserving a pristine user experience was my biggest obstacle. I resolved this by:
 
-1. Using the FileReader API to create image previews before upload
-2. Implementing proper state management for the upload process
-3. Adding loading states and error handling
-4. Ensuring the UI remained responsive and user-friendly throughout the process
+1. Creating image previews prior to upload using the FileReader API
+2. Putting in place appropriate state management for the upload procedure
+3. Including error handling and loading states
+4. Making sure the user interface stayed responsive and intuitive during the procedure
 
-The solution involved careful consideration of the user experience, including proper feedback during the upload process and maintaining a consistent design language across all components.
+The user experience was carefully considered in the solution, which included keeping a consistent design language throughout all components and providing appropriate feedback during the upload process.
 
 ## Technologies Used
 
