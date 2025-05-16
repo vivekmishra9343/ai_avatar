@@ -1,4 +1,4 @@
-// File: W:\projects\intern temp may\ai-dashboard\src\app\layout.tsx
+// File: W:\git desktop\ai_avatar\src\app\layout.tsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

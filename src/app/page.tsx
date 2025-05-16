@@ -18,7 +18,7 @@ interface CustomAvatar {
   imageUrl: string;
 }
 
-type Avatar = User | CustomAvatar;
+//type Avatar = User | CustomAvatar;
 
 const dummyAvatars: CustomAvatar[] = [
   {
