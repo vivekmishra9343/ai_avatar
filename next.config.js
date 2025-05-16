@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
+  distDir: "docs",
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -15,6 +16,7 @@ const nextConfig = {
     ],
   },
   basePath: process.env.NODE_ENV === "production" ? "/ai_avatar" : "",
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;

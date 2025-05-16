@@ -40,20 +40,13 @@ const dummyAvatars: CustomAvatar[] = [
 
 export default function Home() {
   const [users, setUsers] = useState<User[]>([]);
-  const [customAvatars, setCustomAvatars] = useState<CustomAvatar[]>([]);
+  const [customAvatars, setCustomAvatars] =
+    useState<CustomAvatar[]>(dummyAvatars);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setCustomAvatars(dummyAvatars);
-    setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    if (!mounted) return;
-
     const fetchUsers = async () => {
       try {
         setIsLoading(true);
@@ -71,11 +64,11 @@ export default function Home() {
     };
 
     fetchUsers();
-  }, [mounted]);
+  }, []);
 
   const handleCreateAvatar = (name: string, image: File) => {
     const newAvatar: CustomAvatar = {
-      id: `custom-${mounted ? Date.now() : 0}`,
+      id: `custom-${Date.now()}`,
       name,
       imageUrl: URL.createObjectURL(image),
     };
@@ -94,19 +87,6 @@ export default function Home() {
           .includes(searchTerm.toLowerCase())
       : avatar.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
-  if (!mounted) {
-    return (
-      <main className='min-h-screen bg-gray-50'>
-        <Header />
-        <div className='max-w-7xl mx-auto px-4 md:px-8 py-8'>
-          <div className='flex justify-center items-center min-h-[200px]'>
-            <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>
-          </div>
-        </div>
-      </main>
-    );
-  }
 
   return (
     <main className='min-h-screen bg-gray-50'>
